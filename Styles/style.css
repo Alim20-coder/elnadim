@@ -1,0 +1,474 @@
+body {
+    font-family: 'Cairo', sans-serif; /* أو 'Almarai' حسب ذوقك */
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .brand-name {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 800;
+    
+}
+
+:root {
+    --brand-red: #a61e22; 
+    --nav-bg: #1a202c;    
+}
+
+.custom-navbar {
+    background-color: var(--nav-bg) !important;
+    border-bottom: 2px solid var(--brand-red);
+    transition: 0.4s all ease-in-out;
+}
+
+.navbar-scrolled {
+    background-color: rgba(26, 32, 44, 0.98) !important;
+    backdrop-filter: blur(10px);
+    padding: 5px 0 !important;
+}
+
+.main-red-color {
+    color: var(--brand-red);
+}
+
+.logo-wrapper img {
+    height: 55px;
+    background: white;
+    padding: 2px;
+}
+
+.nav-link {
+    color: #e2e8f0 !important;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 15px !important;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    right: 15px;
+    background: var(--brand-red);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: calc(100% - 30px);
+}
+
+.btn-call {
+    background: var(--brand-red);
+    color: white !important;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-call:hover {
+    background: white;
+    color: var(--brand-red) !important;
+    border-color: var(--brand-red);
+}
+
+.btn-call:hover .icon-shake {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--nav-bg);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}
+/* navbar style end and m-query --------- */
+
+:root {
+  --main-red: #a61e22; /* لون اللوجو */
+  --dark-bg: #121821;  /* لون الناف بار */
+}
+
+.hero-section {
+  background-color: var(--dark-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  z-index: 1;
+}
+
+.text-danger-custom { color: var(--main-red); }
+
+.btn-danger-custom {
+  background-color: var(--main-red);
+  color: white;
+  border: none;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-danger-custom:hover {
+  transform: translateY(-5px) scale(1.02);
+  background-color: #8a171b;
+  color: white;
+}
+
+.hero-moving-img {
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  transition: 0.6s ease;
+  border: 8px solid rgba(255,255,255,0.05);
+}
+
+.hero-section:hover .hero-moving-img {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.experience-card {
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 5;
+}
+
+/* حركة التليفون */
+@keyframes shake {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+.icon-shake { animation: shake 2s infinite; }
+
+@media (max-width: 991px) {
+  .hero-section { text-align: center; }
+  .experience-card { right: 50%; transform: translateX(50%); bottom: -30px; }
+  .hero-moving-img { transform: none !important; }
+}
+/* hero style and qyery  */
+.about-section {
+    min-height: 100vh;
+    background-color: #121821;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('./Photos/hero.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(18, 24, 33, 0.95), rgba(18, 24, 33, 0.6));
+    z-index: 2;
+}
+
+.z-3 { z-index: 3; }
+
+.fw-black { font-weight: 900; }
+
+.tracking-wider { letter-spacing: 3px; }
+
+.border-danger-right {
+    border-right: 5px solid #a61e22;
+}
+
+@media (max-width: 991px) {
+    .parallax-bg {
+        background-attachment: scroll;
+        height: 100%;
+    }
+    .border-danger-right {
+        border-right: none;
+        border-bottom: 5px solid #a61e22;
+        padding-bottom: 20px;
+    }
+    .about-overlay {
+        background: rgba(18, 24, 33, 0.85);
+    }
+}
+/* ////////////////////////////////////////////////////// */
+
+
+/* Who we us style  */
+.service-card {
+    border-radius: 20px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: #4b6584; /* لون أيقونات الهيرو */
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    background-color: #a61e22 !important; /* الأحمر المطلوب */
+    transform: rotate(360deg);
+    border-bottom-color: #ffffff;
+}
+
+.service-card:hover h4, 
+.service-card:hover p {
+    color: #ffffff !important;
+
+}
+
+.service-card:hover .icon-box {
+    background-color: #ffffff;
+}
+
+.service-card:hover .icon-box i {
+    color: #a61e22 !important;
+}
+
+.service-card:hover .badge {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+/* services end ------------------ */
+/* تنسيقات سكشن المواقع المطور */
+.locations-section {
+    background-color: #0a192f;
+    padding: 100px 0;
+}
+
+/* تصميم الكارد الصغير ليتناسب مع عدد المناطق الكبير */
+.location-card-mini {
+    background: #112240;
+    padding: 15px 10px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(230, 57, 70, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+
+.location-card-mini i {
+    color: #e63946;
+    font-size: 18px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.location-card-mini span {
+    color: #ccd6f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* تأثير الهوفر الجامد */
+.location-card-mini:hover {
+    background: #e63946; /* يقلب أحمر بالكامل */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+}
+
+.location-card-mini:hover i {
+    color: #fff;
+    transform: rotateY(360deg); /* الدوران اللي طلبته */
+}
+
+.location-card-mini:hover span {
+    color: #fff;
+}
+
+/* تحسين المظهر على الموبايل */
+@media (max-width: 768px) {
+    .location-card-mini span {
+        font-size: 0.8rem;
+    }
+}
+/* ///////////////////////////////////////////////////////// */
+
+.location-card-mini {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* الهوفر الأحمر اللي طلبته */
+.location-card-mini:hover {
+    background-color: #a61e22 !important;
+    transform: translateY(-5px);
+    border-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(166, 30, 34, 0.3);
+}
+
+.location-card-mini i {
+    font-size: 1.2rem;
+    color: #a61e22;
+    transition: 0.3s;
+}
+
+.location-card-mini:hover i, 
+.location-card-mini:hover span {
+    color: #ffffff !important;
+}
+
+.fw-black { font-weight: 900; }
+
+/* ///////////////////////////////////////////// */
+.contact-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--brand-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.ltr-text {
+    direction: ltr;
+    display: inline-block;
+}
+
+.contact-info-box a:hover {
+    color: var(--brand-red) !important;
+    transition: 0.3s;
+}
+
+/* تعديل بسيط للـ Shake Animation ليكون أوضح */
+@keyframes shake {
+    0% { transform: scale(1); }
+    10%, 20% { transform: scale(0.9) rotate(-3deg); }
+    30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+    40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+.icon-shake:hover {
+    animation: shake 0.6s ease-in-out;
+}
+/* Footer Style - تم تظبيط الريسبونسف ومنع الخروج عن الشاشة */
+
+.main-footer {
+    background-color: #0a0e14;
+    border-top: 4px solid var(--brand-red);
+    padding: 60px 0 30px 0; /* مسافات داخلية متوازنة */
+    position: relative;
+    overflow: hidden; /* ضمان عدم خروج أي عنصر */
+}
+
+.footer-link {
+    transition: 0.3s all ease;
+    display: inline-block;
+    color: #ffffff80 !important; /* لون افتراضي هادي */
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+/* تعديل الـ Hover عشان ميبوظش الموبايل */
+.footer-link:hover {
+    color: var(--brand-red) !important;
+    transform: translateX(-5px); /* حركة لليسار بدل البادينج عشان متزقش العناصر */
+}
+
+.hover-red:hover {
+    text-decoration: underline !important;
+    opacity: 0.8;
+    color: var(--brand-red) !important;
+}
+
+/* لضمان ثبات اتجاه الأرقام ومنع تداخل النصوص */
+.ltr-text, [style*="direction: ltr"] {
+    direction: ltr !important;
+    display: inline-block;
+    unicode-bidi: isolate;
+}
+
+@media (max-width: 991px) {
+    .main-footer {
+        text-align: center !important; 
+    }
+    
+    .main-footer .text-lg-end, 
+    .main-footer .text-lg-start {
+        text-align: center !important;
+    }
+
+    .footer-link:hover {
+        transform: none !important;     }
+
+    .main-footer hr {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    .footer-info-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 40px 0 20px 0;
+    }
+
+    .list-unstyled {
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer-link {
+        font-size: 14px;
+    }
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}

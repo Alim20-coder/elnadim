@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النديم لنقل الأثاث | احترافية تتجاوز التوقعات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/style.css">
+  <style>
+        :root {
+            --dark-navy: #0a192f;
+            --main-red: #e63946;
+            --accent-red: #bd1f2d;
+            --light-text: #e0e0e0;
+            --soft-white: #f8f9fa;
+            --card-bg: #112240;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--dark-navy);
+            color: var(--light-text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- الهيدر (إضافة تعديل عشان ميغطيش المحتوى) --- */
+        header {
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            border-bottom: 2px solid var(--main-red);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2000;
+        }
+
+        .custom-navbar {
+            background-color: transparent !important;
+        }
+
+        .logo-wrapper img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: var(--soft-white) !important;
+            margin: 0 10px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--main-red) !important;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                        url('../Styles/Photos/hero.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 15px 50px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h1 span { color: var(--main-red); }
+
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #ccd6f6;
+        }
+
+        .rotating-icon {
+            font-size: clamp(40px, 10vw, 60px);
+            color: var(--main-red);
+            display: inline-block;
+            margin-bottom: 25px;
+            transition: transform 1.2s ease-in-out;
+        }
+
+        .hero:hover .rotating-icon {
+            transform: rotate(360deg);
+        }
+
+        /* --- كاردات المميزات --- */
+        .features {
+            padding: 80px 0;
+            background-color: var(--dark-navy);
+        }
+
+        .feature-box {
+            background: var(--card-bg);
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(230, 57, 70, 0.1);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--main-red);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.15);
+        }
+
+        .feature-box i {
+            font-size: 40px;
+            color: var(--main-red);
+            margin-bottom: 20px;
+        }
+
+        /* --- لماذا نحن --- */
+        .why-choose-us {
+            padding: 80px 0;
+            background-color: var(--soft-white);
+            color: #333;
+        }
+
+        .info-card {
+            padding: 20px;
+            border-right: 5px solid var(--main-red);
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .info-card:hover {
+            background: var(--dark-navy);
+            color: #fff;
+            transform: translateX(-10px);
+        }
+
+        .img-stack img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* --- أزرار --- */
+        .cta-button {
+            background-color: var(--main-red);
+            color: white !important;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: var(--transition);
+            border: 2px solid var(--main-red);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--main-red) !important;
+        }
+
+        .btn-call {
+            background: var(--main-red);
+            color: white !important;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background: #050c18;
+            padding: 50px 0;
+            text-align: center;
+            border-top: 3px solid var(--main-red);
+        }
+
+        .social-icons a {
+            font-size: 25px;
+            margin: 0 10px;
+            color: var(--light-text);
+        }
+
+        /* --- التعديلات الجوهرية للريسبونسف (إصلاح المشاكل) --- */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: var(--dark-navy);
+                padding: 20px;
+                margin-top: 15px;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
+            .nav-link { margin: 10px 0; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .info-card { 
+                border-right: none; 
+                border-bottom: 5px solid var(--main-red); 
+                margin-bottom: 20px;
+            }
+            .img-stack { margin-top: 30px; }
+            .hero { padding-top: 150px; }
+            .row { --bs-gutter-x: 1.5rem; } /* ضبط المسافات العرضية */
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 0.9rem; }
+            .cta-button { width: 100%; padding: 12px 20px; }
+            .feature-box { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar py-2" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+      <div class="logo-wrapper">
+        <img src="../Styles/Photos/logo.jpeg" alt="النديم" class="img-fluid rounded">
+      </div>
+      <div class="brand-text">
+        <h1 class="h4 mb-0 fw-bold main-red-color text-danger">النديم</h1>
+        <small class="d-block text-white-50">لخدمات نقل الأثاث</small>
+      </div>
+    </a>
+
+    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#alNadeemNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="alNadeemNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="../index.html#hero">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#services">خدماتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="./mdwna.html">المدونة</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#locations">المواقع</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contact-us">اتصل بنا</a></li>
+      </ul>
+      <a href="tel:0796380651" class="btn btn-call rounded-pill px-4 py-2 d-flex align-items-center gap-2">
+          <i class="fas fa-phone"></i>
+          <span>0796380651</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="container">
+        <i class="fas fa-truck-moving rotating-icon"></i>
+        <h1>شركة <span>النديم</span> لنقل الأثاث</h1>
+        <p>نحن لا ننقل "عفش"، نحن ننقل ذكرياتك وأمانك. بخبرة تمتد لسنوات في المملكة، نضمن لك تجربة نقل هادئة، سريعة، ومحمية.</p>
+        <a href="tel:0796380651" class="cta-button">إحجز موعدك الآن: 0796380651</a>
+    </div>
+</section>
+
+<section class="features" id="services">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3" style="font-size: 2.5rem;">خدماتنا <span class="text-danger">الاحترافية</span></h2>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-box">
+                    <i class="fas fa-shield-heart"></i>
+                    <h3>تغليف ملكي</h3>
+                    <p>نستخدم 5 طبقات حماية لضمان سلامة التحف والزجاج.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>فك وتركيب</h3>
+                    <p>نجارون متخصصون لفك وتركيب غرف النوم والستائر.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-box">
+                    <i class="fas fa-dolly"></i>
+                    <h3>أوناش هيدروليك</h3>
+                    <p>نصل لأعلى الطوابق بأمان تام لتجنب ضيق السلالم.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-box">
+                    <i class="fas fa-user-check"></i>
+                    <h3>ضمان شامل</h3>
+                    <p>نحن مسؤولون عن كل قطعة. نضمن وصول أثاثك دون خدش.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose-us" id="about">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h6 class="text-danger fw-bold mb-3">| ريادة في كل تفصيلة</h6>
+                <h2 class="display-5 fw-bold mb-4">نضع <span class="text-danger">معايير ذهبية</span> لنقل الأثاث</h2>
+                <div class="row g-4">
+                    <div class="col-sm-6"><div class="info-card"><h5>فريق فني متخصص</h5><p class="small">نجارون محترفون للفك والتركيب.</p></div></div>
+                    <div class="col-sm-6"><div class="info-card"><h5>تغليف احترافي</h5><p class="small">كرتون مضلع ونايلون فقاعي.</p></div></div>
+                    <div class="col-sm-6"><div class="info-card"><h5>أسطول مجهز</h5><p class="small">شاحنات مغلقة ومبطنة بالكامل.</p></div></div>
+                    <div class="col-sm-6"><div class="info-card"><h5>دقة المواعيد</h5><p class="small">نحترم وقتك ونلتزم بالجدول الزمني.</p></div></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-stack">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000" class="img-fluid shadow-lg" alt="احترافية النقل">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-white text-center">
+        <h3 class="mb-4">النديم.. رفيقك في كل انتقال</h3>
+        <div class="social-icons mb-4">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="text-secondary small">© 2026 جميع الحقوق محفوظة لشركة النديم لنقل الأثاث - عمان، الأردن</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
